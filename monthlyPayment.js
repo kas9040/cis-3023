@@ -13,6 +13,8 @@ var calculateMonthlyPayment = function() {
     
     var floatMonthlyPayment = floatInitial * (floatMonthlyInterest/(1-Math.pow((1+floatMonthlyInterest),(-intMonths)))); //calculates monthly payment
     
+    floatMonthlyPayment = parseFloat(floatMonthlyPayment.toFixed(2));
+    
     $("monthly_payment").value = "$" + floatMonthlyPayment.toFixed(2); //returns monthly payment rounded to 2 decimals
     
     return false;
